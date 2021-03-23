@@ -33,7 +33,7 @@ INSERT INTO tblWeather VALUES (seqWeather.nextVal, 1, '2021-03-19', 8, 32, 50);
 commit;
 ```
 
-##### 2. ResponseBody()로 지역을 매개로 해당 지역의 날씨 정보 DTO의 배열 List를 JSON으로 변환하여 전달한다.
+##### 2. ResponseBody()로 지역을 매개로 해당 지역의 날씨 정보 DTO의 배열 List를 JSON으로 변환하여 전달합니다.
 ``` java
 @Controller
 public class WeatherController {
