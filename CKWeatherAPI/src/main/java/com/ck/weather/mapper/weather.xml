@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="weather">
+
+	<select id="getWeatherList" parameterType="string" resultType="com.ck.weather.WeatherDTO">
+		select seq, (select city from tblLocation where seq = locationSeq) as city, observedDate, temperature, humidity, rain from tblWeather where (select city from tblLocation where seq = locationSeq) = #{city}
+	</select>
+
+</mapper>

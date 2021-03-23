@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+E:\WeatherAPI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2780753582.index
+\CKWeatherAPI\src\main\java
