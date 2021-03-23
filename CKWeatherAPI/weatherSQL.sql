@@ -30,17 +30,6 @@ INSERT INTO tblWeather VALUES (seqWeather.nextVal, 1, '2021-03-21', 13, 90, 85);
 INSERT INTO tblWeather VALUES (seqWeather.nextVal, 1, '2021-03-20', 12, 86, 50);
 INSERT INTO tblWeather VALUES (seqWeather.nextVal, 1, '2021-03-19', 8, 32, 50);
 
-select
-    seq,
-    (select city from tblLocation where seq = locationSeq) as city,
-    observedDate,
-    temparature,
-    humidity,
-    rain
-from tblWeather;
-    
-select seq, (select city from tblLocation where seq = locationSeq) as city, observedDate, temparature, humidity, rain from tblWeather where (select city from tblLocation where seq = locationSeq) = '경기도 화성시 진안동';
-
 commit;
 
 
