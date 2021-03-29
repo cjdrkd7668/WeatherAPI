@@ -165,11 +165,11 @@ public class WeatherController {
 	</script>
 ```
 ***
-![result](/images/result.PNG)
+![result](/images/resultNew.PNG)
 
 > 지역 이름을 태그로 감싼 버튼을 누르거나 지도에서 특정 지역을 클릭하면 해당 지역의 날씨 정보를 보여줍니다.
 
-![result](/images/result2.PNG)
+![result](/images/resultNew2.PNG)
 
 
 
