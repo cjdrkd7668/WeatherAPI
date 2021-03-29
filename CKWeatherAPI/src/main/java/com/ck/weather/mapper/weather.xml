@@ -7,5 +7,9 @@
 	<select id="getWeatherList" parameterType="string" resultType="com.ck.weather.WeatherDTO">
 		select seq, (select city from tblLocation where seq = locationSeq) as city, observedDate, temperature, humidity, rain from tblWeather where (select city from tblLocation where seq = locationSeq) = #{city}
 	</select>
+	
+	<select id="getWeatherListByPosition" parameterType="com.ck.weather.LocationDTO" resultType="com.ck.weather.WeatherDTO">
+		select seq, (select city from tblLocation where seq = locationSeq) as city, observedDate, temperature, humidity, rain from tblWeather where locationSeq = (select seq from tblLocation where trunc(latitude, 2) = #{latitude} and trunc(longtitude, 2) = #{longtitude})
+	</select>
 
 </mapper>
